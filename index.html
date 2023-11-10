@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sub-container">
+        <div class="mobile">
+          <header class="mobile-header">
+            <div class="mobile-navbar">
+              <iconify-icon icon="ooui:previous-ltr" style="color: white"></iconify-icon>
+              <div class="mobile-info">
+                <img src="images/avatar.jpg" alt="Samuel" />
+                <p>Samuel Green<span>Available to Walk</span></p>
+              </div>
+              <iconify-icon icon="pepicons-pencil:dots-y" style="color: white"></iconify-icon>
+            </div>
+          </header>
+
+          <section class="messages">
+            <article class="message message-me">
+              <p>That sounds great. I’d be happy with to discuse more.</p>
+            </article>
+
+            <article class="message message-me">
+              <p>Could you send over some pictures of your dog, please?</p>
+            </article>
+
+            <article class="message-photos">
+              <figure>
+                <img src="images/dog-image-1.jpg" alt="Dog1" />
+              </figure>
+              <figure>
+                <img src="images/dog-image-2.jpg" alt="Dog2" />
+              </figure>
+              <figure>
+                <img src="images/dog-image-3.jpg" alt="Dog3" />
+              </figure>
+            </article>
+
+            <article class="message message-your">
+              <p>Here are a few pictures. She’s a happy girl!</p>
+            </article>
+
+            <article class="message message-your">
+              <p>Can you make it?</p>
+            </article>
+
+            <article class="message message-me">
+              <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+            </article>
+
+            <article class="message-price">
+              <fieldset>
+                <div class="message-price-control">
+                  <div class="message-price-input">
+                    <input type="radio" id="30minutes" name="30minutes" value="30min" />
+                    <label for="contactChoice1">30 minutes walk <span>$29</span></label>
+                  </div>
+
+                  <div class="message-price-input">
+                    <input type="radio" id="60minutes" name="60minutes" value="60min" />
+                    <label for="contactChoice1">1 hour walk <span>$49</span></label>
+                  </div>
+                </div>
+              </fieldset>
+            </article>
+          </section>
+
+          <section class="send-message">
+            <input type="text" name="txtmessage" id="txtmessage" placeholder="Type a message…" />
+            <button type="button">
+              <iconify-icon icon="ion:send-sharp" style="color: white"></iconify-icon>
+            </button>
+          </section>
+        </div>
+
+        <div class="about">
+          <h2 class="about-title">Simple booking</h2>
+          <p class="about-content">
+            Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk
+            has been completed you can rate your walker and book again all through the chat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
