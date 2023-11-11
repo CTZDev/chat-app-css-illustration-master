@@ -1,0 +1,22 @@
+/**Primarios - textos*/
+/*Gradientes*/
+/*Secundarios*/
+:root {
+  --primary-pale-violet: hsl(276, 100%, 81%);
+  --primary-moderate-violet: hsl(276, 55%, 52%);
+  --primary-desaturated-dark: hsl(271, 15%, 43%);
+  --primary-grayish-blue: hsl(206, 6%, 79%);
+  --primary-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --primary-dark-grayish-violet: hsl(270, 7%, 64%);
+  --gradient-light-magenta: hsl(293, 100%, 63%);
+  --gradient-light-violet: hsl(264, 100%, 61%);
+  --secondary-white: hsl(0, 0%, 100%);
+  --secondary-light-grayish-violet: hsl(270, 20%, 96%);
+  --secondary-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --secondary-very-light-magenta: hsl(289, 100%, 72%);
+  --font-family: "Rubik", sans-serif, arial;
+  --fz-sm: 13px;
+  --fz-md: 16px;
+}
+
+/*# sourceMappingURL=root.css.map */

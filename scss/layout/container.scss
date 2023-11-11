@@ -1,0 +1,27 @@
+@use "../global" as *;
+@use "../util" as *;
+
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.sub-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: rem(768);
+  position: relative;
+  background-color: var(--secondary-light-grayish-violet);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 40%;
+    left: 0;
+    background-image: linear-gradient(to bottom, var(--gradient-light-magenta) 30%, var(--gradient-light-violet) 100%);
+    border-bottom-right-radius: 100vw;
+  }
+}

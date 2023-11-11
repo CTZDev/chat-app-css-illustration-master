@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="dist/css/style.css" />
     <title>Frontend Mentor | [Challenge Name Here]</title>
     <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
@@ -14,70 +15,86 @@
         <div class="mobile">
           <header class="mobile-header">
             <div class="mobile-navbar">
-              <iconify-icon icon="ooui:previous-ltr" style="color: white"></iconify-icon>
+              <a href="#" class="mobile-back">
+                <iconify-icon icon="ooui:previous-ltr" style="color: white" class="mobile-info-icon" width="12" height="12"></iconify-icon>
+              </a>
               <div class="mobile-info">
-                <img src="images/avatar.jpg" alt="Samuel" />
+                <img src="images/avatar.jpg" alt="Samuel" width="28" height="28" />
                 <p>Samuel Green<span>Available to Walk</span></p>
               </div>
-              <iconify-icon icon="pepicons-pencil:dots-y" style="color: white"></iconify-icon>
+              <iconify-icon
+                icon="pepicons-pencil:dots-y"
+                style="color: white"
+                class="mobile-info-icon mobile-info-property"
+                width="16"
+                height="16"
+              ></iconify-icon>
             </div>
           </header>
 
-          <section class="messages">
-            <article class="message message-me">
-              <p>That sounds great. I’d be happy with to discuse more.</p>
+          <section class="messages wrapper">
+            <article class="message-me">
+              <div class="message">
+                <p>That sounds great. I’d be happy to discuse more.</p>
+              </div>
+
+              <div class="message">
+                <p>Could you send over some pictures of your dog, please?</p>
+              </div>
             </article>
 
-            <article class="message message-me">
-              <p>Could you send over some pictures of your dog, please?</p>
+            <article class="message-your">
+              <div class="message-photos">
+                <figure>
+                  <img src="images/dog-image-1.jpg" alt="Dog1" />
+                </figure>
+                <figure>
+                  <img src="images/dog-image-2.jpg" alt="Dog2" />
+                </figure>
+                <figure>
+                  <img src="images/dog-image-3.jpg" alt="Dog3" />
+                </figure>
+              </div>
+
+              <div class="message">
+                <p>Here are a few pictures. She’s a happy girl!</p>
+              </div>
+
+              <div class="message">
+                <p>Can you make it?</p>
+              </div>
             </article>
 
-            <article class="message-photos">
-              <figure>
-                <img src="images/dog-image-1.jpg" alt="Dog1" />
-              </figure>
-              <figure>
-                <img src="images/dog-image-2.jpg" alt="Dog2" />
-              </figure>
-              <figure>
-                <img src="images/dog-image-3.jpg" alt="Dog3" />
-              </figure>
-            </article>
-
-            <article class="message message-your">
-              <p>Here are a few pictures. She’s a happy girl!</p>
-            </article>
-
-            <article class="message message-your">
-              <p>Can you make it?</p>
-            </article>
-
-            <article class="message message-me">
-              <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-            </article>
-
-            <article class="message-price">
-              <fieldset>
+            <article class="message-me">
+              <div class="message">
+                <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+              </div>
+              <fieldset class="message-price">
                 <div class="message-price-control">
-                  <div class="message-price-input">
-                    <input type="radio" id="30minutes" name="30minutes" value="30min" />
-                    <label for="contactChoice1">30 minutes walk <span>$29</span></label>
-                  </div>
-
-                  <div class="message-price-input">
-                    <input type="radio" id="60minutes" name="60minutes" value="60min" />
-                    <label for="contactChoice1">1 hour walk <span>$49</span></label>
-                  </div>
+                  <label class="message-price-input">
+                    <input type="radio" id="contactChoice1" name="minutes" value="30min" />
+                    <span class="custom-radio"></span>
+                    <span class="message-price-detail">30 minutes walk</span>
+                  </label>
+                  <p>$29</p>
+                </div>
+                <div class="message-price-control">
+                  <label class="message-price-input">
+                    <input type="radio" id="contactChoice2" name="minutes" value="30min" />
+                    <span class="custom-radio"></span>
+                    <span class="message-price-detail">1 hour walk</span>
+                  </label>
+                  <p>$49</p>
                 </div>
               </fieldset>
             </article>
-          </section>
 
-          <section class="send-message">
-            <input type="text" name="txtmessage" id="txtmessage" placeholder="Type a message…" />
-            <button type="button">
-              <iconify-icon icon="ion:send-sharp" style="color: white"></iconify-icon>
-            </button>
+            <article class="send-message">
+              <input type="text" name="txtmessage" id="txtmessage" placeholder="Type a message…" />
+              <button type="button" class="button">
+                <iconify-icon icon="ion:send-sharp" style="color: white" height="14" width="14" class="button-icon"></iconify-icon>
+              </button>
+            </article>
           </section>
         </div>
 

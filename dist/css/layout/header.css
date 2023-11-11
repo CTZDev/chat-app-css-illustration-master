@@ -1,0 +1,207 @@
+/**Primarios - textos*/
+/*Gradientes*/
+/*Secundarios*/
+:root {
+  --primary-pale-violet: hsl(276, 100%, 81%);
+  --primary-moderate-violet: hsl(276, 55%, 52%);
+  --primary-desaturated-dark: hsl(271, 15%, 43%);
+  --primary-grayish-blue: hsl(206, 6%, 79%);
+  --primary-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --primary-dark-grayish-violet: hsl(270, 7%, 64%);
+  --gradient-light-magenta: hsl(293, 100%, 63%);
+  --gradient-light-violet: hsl(264, 100%, 61%);
+  --secondary-white: hsl(0, 0%, 100%);
+  --secondary-light-grayish-violet: hsl(270, 20%, 96%);
+  --secondary-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --secondary-very-light-magenta: hsl(289, 100%, 72%);
+  --font-family: "Rubik", sans-serif, arial;
+  --fz-sm: 13px;
+  --fz-md: 16px;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2"), url("../fonts/Rubik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Medium.woff2") format("woff2"), url("../fonts/Rubik-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Bold.woff2") format("woff2"), url("../fonts/Rubik-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-weight: normal;
+  font-family: var(--font-family);
+  min-height: 100vh;
+  font-size: var(--fz-sm);
+  text-rendering: optimizeSpeed;
+}
+@media only screen and (min-width: 48em) {
+  body {
+    font-size: var(--fz-md);
+  }
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*remove blue background when clicking*/
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/*img*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/*Flex*/
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-fd-c {
+  flex-direction: column;
+}
+.flex-fw-w {
+  flex-wrap: wrap;
+}
+
+.none {
+  display: none;
+}
+
+.wrapper {
+  padding: 12px;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.mobile {
+  border-radius: 1.25rem;
+  position: relative;
+  min-width: 18.75rem;
+  margin: 4.5rem auto;
+  position: relative;
+  z-index: 1;
+}
+.mobile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  margin: -12px;
+  z-index: -1;
+  background-color: var(--secondary-white);
+}
+.mobile-header {
+  background-image: linear-gradient(to right, var(--gradient-light-violet), var(--gradient-light-magenta));
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+}
+.mobile-navbar {
+  color: var(--secondary-white);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1.875rem 1rem 0.75rem;
+}
+.mobile-info {
+  display: inherit;
+  align-items: center;
+  gap: 0.625rem;
+}
+.mobile-info img {
+  border-radius: 100vw;
+  border: 0.0625rem solid var(--secondary-white);
+}
+.mobile-info p > span {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 0.75em;
+}
+.mobile-info-property {
+  margin-left: auto;
+}
+.mobile-info-icon {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*# sourceMappingURL=header.css.map */
