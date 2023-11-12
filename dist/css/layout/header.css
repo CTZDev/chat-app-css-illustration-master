@@ -149,11 +149,15 @@ picture {
 }
 .mobile {
   border-radius: 1.25rem;
-  position: relative;
   min-width: 18.75rem;
   margin: 4.5rem auto;
   position: relative;
   z-index: 1;
+}
+@media only screen and (min-width: 90em) {
+  .mobile {
+    margin-left: 23.75rem;
+  }
 }
 .mobile::before {
   content: "";

@@ -5,23 +5,55 @@
   display: grid;
   place-items: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: rem(768);
+  align-items: center;
+  height: 100%;
+  width: 100%;
   position: relative;
   background-color: var(--secondary-light-grayish-violet);
+  padding: rem(24);
+
+  @include mq(large) {
+    grid-template-columns: rem(780) rem(650);
+
+    &::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    min-width: rem(500);
+    background-color: rgba($grayish-blue, 0.2);
+    border-top-left-radius: 100vw;
+    }
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    right: 50%;
-    bottom: 40%;
     left: 0;
+    width: 100%;
+    max-width: 50%;
+    bottom: 44%;
     background-image: linear-gradient(to bottom, var(--gradient-light-magenta) 30%, var(--gradient-light-violet) 100%);
     border-bottom-right-radius: 100vw;
+
+    @include mq(small) {
+      bottom: 15%;
+    }
+
+    @include mq(medium) {
+      bottom: 10%;
+    }
+
+    @include mq(large) {
+      max-width: rem(500);
+    }
   }
 }

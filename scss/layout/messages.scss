@@ -8,6 +8,8 @@
   grid-template-columns: 1fr;
   gap: rem(20);
   background-color: var(--secondary-light-grayish-violet);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .message {

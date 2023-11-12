@@ -1,15 +1,16 @@
 @use "../global" as *;
 @use "../util" as *;
 
-
-
 .mobile {
   border-radius: rem(20);
-  position: relative;
   min-width: rem(300);
   margin: rem(72) auto;
   position: relative;
   z-index: 1;
+
+  @include mq(large) {
+    margin-left: rem(380);
+  }
 
   &::before {
     content: "";

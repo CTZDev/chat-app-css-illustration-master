@@ -178,6 +178,7 @@ picture {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .send-message .button-icon {
   margin-left: 0.1875rem;

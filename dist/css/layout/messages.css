@@ -153,6 +153,8 @@ picture {
   grid-template-columns: 1fr;
   gap: 1.25rem;
   background-color: var(--secondary-light-grayish-violet);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .message {

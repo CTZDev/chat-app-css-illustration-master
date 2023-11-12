@@ -1,0 +1,25 @@
+@use "../global" as *;
+@use "../util" as *;
+
+.about {
+  text-align: center;
+  max-width: rem(500);
+  margin: auto;
+
+  @include mq(medium) {
+    max-width: rem(800);
+  }
+
+  &-title {
+    font-size: rem(32);
+    color: var(--primary-very-dark-desaturated-violet);
+    font-weight: 500;
+  }
+
+  &-content {
+    padding: rem(30);
+    line-height: 1.7;
+    font-size: rem(16);
+    color: var(--primary-dark-grayish-violet);
+  }
+}

@@ -178,6 +178,7 @@ picture {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .send-message .button-icon {
   margin-left: 0.1875rem;
@@ -229,33 +230,72 @@ picture {
   display: grid;
   place-items: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .sub-container {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 48rem;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   position: relative;
   background-color: var(--secondary-light-grayish-violet);
+  padding: 1.5rem;
+}
+@media only screen and (min-width: 90em) {
+  .sub-container {
+    grid-template-columns: 48.75rem 40.625rem;
+  }
+  .sub-container::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    min-width: 31.25rem;
+    background-color: rgba(198, 202, 205, 0.2);
+    border-top-left-radius: 100vw;
+  }
 }
 .sub-container::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 50%;
-  bottom: 40%;
   left: 0;
+  width: 100%;
+  max-width: 50%;
+  bottom: 44%;
   background-image: linear-gradient(to bottom, var(--gradient-light-magenta) 30%, var(--gradient-light-violet) 100%);
   border-bottom-right-radius: 100vw;
+}
+@media only screen and (min-width: 48em) {
+  .sub-container::before {
+    bottom: 15%;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .sub-container::before {
+    bottom: 10%;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .sub-container::before {
+    max-width: 31.25rem;
+  }
 }
 
 .mobile {
   border-radius: 1.25rem;
-  position: relative;
   min-width: 18.75rem;
   margin: 4.5rem auto;
   position: relative;
   z-index: 1;
+}
+@media only screen and (min-width: 90em) {
+  .mobile {
+    margin-left: 23.75rem;
+  }
 }
 .mobile::before {
   content: "";
@@ -312,6 +352,8 @@ picture {
   grid-template-columns: 1fr;
   gap: 1.25rem;
   background-color: var(--secondary-light-grayish-violet);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .message {
@@ -371,6 +413,28 @@ picture {
 .message-price p {
   font-weight: 700;
   font-size: 1.6em;
+}
+
+.about {
+  text-align: center;
+  max-width: 31.25rem;
+  margin: auto;
+}
+@media only screen and (min-width: 64em) {
+  .about {
+    max-width: 50rem;
+  }
+}
+.about-title {
+  font-size: 2rem;
+  color: var(--primary-very-dark-desaturated-violet);
+  font-weight: 500;
+}
+.about-content {
+  padding: 1.875rem;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--primary-dark-grayish-violet);
 }
 
 /*# sourceMappingURL=style.css.map */
